@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloggers_info</title>
+</head>
+<body>
+<h1>Деталі профілю {{ blogger.name }}</h1>
+
+    <p>Ім'я: {{ blogger.name }}</p>
+    <p>Категорія: {{ blogger.category }}</p>
+    <p>Короткий опис: {{ blogger.description }}</p>
+    <p>Посилання на соціальні мережі:
+        <a href="{{ blogger.social_media_link }}" target="_blank">{{ blogger.social_media_link }}</a>
+    </p>
+</body>
+</html>

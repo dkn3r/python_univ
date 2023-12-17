@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloggers</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список блогерів</h1>
+    <table border="1">
+        <tr>
+            <th>Ім'я</th>
+            <th>Категорія</th>
+            <th>Короткий опис</th>
+        </tr>
+        {% for blogger_name, blogger in bloggers.items %}
+            <tr>
+                <td><a href="{% url 'blogger_details' blogger_name=blogger_name %}">{{ blogger.name }}</a></td>
+                <td>{{ blogger.category }}</td>
+                <td>{{ blogger.description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
